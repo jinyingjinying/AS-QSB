@@ -73,7 +73,7 @@ def friedman(n, k, rank_matrix):
 
 def nemenyi(n, k, q):
     return q * (np.sqrt(k * (k + 1) / (6 * n)))
-    
+
 dummy = [0.4993, 0.5146, 0.5141, 0.5144]
 svm = [0.8118, 0.8167, 0.8187, 0.8177]
 dnn = [0.842, 0.8385, 0.8606, 0.8493]
@@ -107,8 +107,9 @@ plt.ylabel('Classifiers',fontsize=15,fontweight='bold')
 plt.savefig("D:\\document\\AS-QSB\\friedman_test.png",dpi=500, bbox_inches = 'tight')
 plt.show()
 
-
-# Mann-Whitney U test
+"""
+	Mann-Whitney U test
+"""
 
 print(stats.mannwhitneyu(dummy,knn,alternative='two-sided'))
 print(stats.mannwhitneyu(dummy,rf,alternative='two-sided'))
